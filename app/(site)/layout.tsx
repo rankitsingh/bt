@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import ClientLayout from "./Provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "BharatTender — India's Private B2B Tender Marketplace",
@@ -25,6 +26,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
+        <SpeedInsights />
       </body>
     </html>
   );
